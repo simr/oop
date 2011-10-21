@@ -17,9 +17,6 @@ public class LvaListCancelled {
 	}
 	public void addlva(Lva lva) {
 		this.lvalistcancelled.add(lva);
-	}
-	
-	public void removelva(Lva lva) {
-		this.lvalistcancelled.remove(lva);
+		lva.informAttendees("Event cancelled. We're sorry!");
 	}
 }
