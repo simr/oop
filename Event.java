@@ -8,6 +8,9 @@ public class Event {
 	private Date now = new Date();
 	private String title, description;
 	private Set<Person> attendees = new HashSet<Person>();
+	
+	public Event () {
+	}
 
 	public Date getRegisterindate() {
 		return registerindate;
