@@ -65,15 +65,18 @@ public class Event {
 		this.informAttendees("New description: " + description);
 	}
 	
-	public void register(Person p) {
+	public boolean register(Person p) {
+		boolean me = false;
 		if (registerindate != null && registeroutdate != null) {
 			if (now.getTime() > this.registerindate.getTime() && now.getTime() < this.registeroutdate.getTime()) {
 				//TODO: ausnahme
 				if (p.hasDependencies(depends)) {
+					me = true;
 					this.attendees.add(p);
 				}
 			}
 		}
+		return me;
 	}
 	public void checkOut(Person p) {
 		if (checkoutdate != null) {

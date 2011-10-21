@@ -4,7 +4,6 @@ public class Exercise extends Lva {
 
 	public Exercise(int coursenr, String title) {
 		super(coursenr, title);
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getGroupsize() {
@@ -15,4 +14,8 @@ public class Exercise extends Lva {
 		this.groupsize = groupsize;
 	}
 
+	public boolean register(Person p) {
+		return super.register(p);
+		//TODO: tutor zuweisen
+	}
 }
